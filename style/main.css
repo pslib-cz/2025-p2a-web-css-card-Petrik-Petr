@@ -10,6 +10,7 @@
         --denied: #ff8686;
         --text: #515959;
         --border: #59de0c;
+        --button: #ffffff;
     }
     .main {
         display: flow-root;
@@ -30,5 +31,40 @@
 
 @layer components {
     /* todo components */
- 
+    .greener {
+        color: var(--secondary);
+        font-size: 2em;
+    }
+    .green {
+        color: var(--primary);
+    }
+    .bigGreen {
+        color: var(--primary);
+        font-size: 1.75em;
+    }
+    .smaller {
+        font-size: 14px;
+    }
+    .smallerSmaller {
+        font-size: 13px;
+    }
+    .button {
+        text-align: center;
+        border-radius: 0.5em;
+        padding: 1.3em;
+        background-color: var(--primary);
+    }
+    .buttonText {
+        color: var(--button);
+        text-decoration-line: none;
+    }
+    .point {
+        padding-top: .5em;
+    }
+    .check {
+        list-style-image: url(/images/check.svg);
+    }
+    .cross {
+        list-style-image: url(/images/cross.svg);
+    }
 }
