@@ -1,16 +1,16 @@
 @layer reset, base, components;
 
 @import url('normalize.css') layer(reset);
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap') layer(base);
-
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap') layer(base);
+*/
 @layer reset {
     :root {
-        --primary: #07755D;
-        --secondary: #59bc1c;
-        --denied: #ff8686;
-        --text: #515959;
-        --border: #59de0c;
-        --button: #ffffff;
+        --primary: #ffffff;
+        --secondary: #ce410c;
+        --denied: #fed7aa;
+        --text: #000;
+        --border: #ffbf76;
+        --button: #f56c13;
     }
     .main {
         display: flow-root;
@@ -26,45 +26,79 @@
         max-width: 21em;
         margin: 1rem; /* without scaling */
         padding: 1em;
+        text-align: center;
+        border-radius: 1em;
+        /*background-color: var(--denied);*/
+        border: 0px solid #acacac;
+        border-width: 0.1px;
     }
 }
 
 @layer components {
-    /* todo components */
-    .greener {
+    .left {
+        text-align: left;
+    }
+    .profesionalRating {
+        display: inline-block;
         color: var(--secondary);
-        font-size: 2em;
+        border-radius: 1em;
+        background-color: var(--denied);
+        border:2px;
+        padding: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
+        /*padding-top: ;*/
+        font-size: 12px;
+        margin-bottom: 20px;
     }
-    .green {
+    .profesionalHeader {
+        font-size: 34px;
+        margin-top: auto;
+        margin-bottom: 20px;
+    }
+    .profesionalCost {
+        margin-top: 0px;
+        display: inline-block;
+        border-radius: 0.4em;
+        background-color: var(--button);
+        padding: 1em;
+        padding-top: 0.75em;
+        padding-bottom: 0.6em;
         color: var(--primary);
+        font-size: 34px;
+        box-shadow: 0px 4px 50px var(--border);
     }
-    .bigGreen {
-        color: var(--primary);
-        font-size: 1.75em;
+    .weightLight{
+        font-weight: lighter;
     }
-    .smaller {
-        font-size: 14px;
+    li::marker{
+        color: #f56c13;
+        font-weight: 900;
     }
-    .smallerSmaller {
-        font-size: 13px;
+    li {
+        text-align: left;
+        list-style: '✓     ';
+        padding-bottom: 20px;
+        color: var(--text);
     }
-    .button {
-        text-align: center;
+    .buttonProfesional{
+        border: 0px solid var(--button);
         border-radius: 0.5em;
-        padding: 1.3em;
+        border-width: 3px;
+        padding-top: 1em;
+        padding-bottom: 1em;
         background-color: var(--primary);
-    }
-    .buttonText {
         color: var(--button);
-        text-decoration-line: none;
     }
-    .point {
-        padding-top: .5em;
+    .buttonProfesionalTextColor{
+        color: var(--button);
+        text-decoration: none;
+        font-weight: bold;
     }
-    .check {
-        list-style-image: url(/images/check.svg);
-    }
-    .cross {
-        list-style-image: url(/images/cross.svg);
+    section{
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-bottom: 1.5em;
+        padding-top: 1.5em;
     }
 }
